@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="Goibibo Test Suite"
+       parallel="classes"  thread-count="5">
+<listeners>
+    <listener class-name="com.airline.listeners.TestListener"/>
+  </listeners>
+    <test name="Flight Search Tests">
+        <classes>
+            <class name="com.airline.test.FlightSearchTest"/>
+            <!--  <class name="com.airline.test.FlightApiTest"/>-->
+        </classes>
+    </test>
+
+</suite>
