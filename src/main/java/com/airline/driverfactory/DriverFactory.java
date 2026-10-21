@@ -33,8 +33,15 @@ public class DriverFactory {
 	    			// Hides the "Chrome is being controlled by automated software" banner
 	    			
 	    			
-	    			 co.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
-	    		        co.setExperimentalOption("useAutomationExtension", false);
+	    			co.setExperimentalOption("excludeSwitches", new String[]{"enable-automation"});
+	    			co.setExperimentalOption("useAutomationExtension", false);
+
+	    			// 3. Fake a real human user agent string
+	    			co.addArguments("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36");
+
+	    			// 4. Run in maximize window to mimic an actual monitor footprint
+	    			co.addArguments("--start-maximized");
+	    			 
 
 	    		        // 3. Optional: Add extra stealth to disguise automation signatures
 	    		       
