@@ -103,7 +103,7 @@
                     <div class="method-list-content failed suite-Goibibo_Test_Suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Goibibo_Test_Suite" title="com.airline.test.FlightSearchTest" class="method navigator-link" hash-for-method="searchFlightsWithValidRoute">searchFlightsWithValidRoute</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Goibibo_Test_Suite" title="com.airline.test.FlightBookingE2ETest" class="method navigator-link" hash-for-method="searchFlightsWithValidRoute">searchFlightsWithValidRoute</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Goibibo_Test_Suite -->
@@ -121,7 +121,7 @@
           <div class="suite-Goibibo_Test_Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">com.airline.test.FlightSearchTest</span>
+              <span class="class-name">com.airline.test.FlightBookingE2ETest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
@@ -129,37 +129,22 @@
                   <a name="searchFlightsWithValidRoute">
                   </a> <!-- searchFlightsWithValidRoute -->
                   <span class="method-name">searchFlightsWithValidRoute</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchSessionException: invalid session id
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //span[contains(text(), &apos;Flights from&apos;)]/b[text()=&apos;New Delhi&apos;]/following-sibling::b[text()=&apos;Mumbai&apos;] (tried for 10 second(s) with 500 milliseconds interval)
 Build info: version: &apos;4.27.0&apos;, revision: &apos;d6e718d134&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.12&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [705f2322dc075974a7d3f201fe66904b, findElement {value=fromCity, using=id}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 155.0.8059.84, chrome: {chromedriverVersion: 155.0.8059.84 (5869fe313571..., userDataDir: C:\Users\LENOVO\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50824}, goog:processID: 1568, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50824/devtoo..., se:cdpVersion: 155.0.8059.84, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 705f2322dc075974a7d3f201fe66904b
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:66)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:194)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:190)
-	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:627)
-	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:624)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
-	at com.airline.pages.HomePage.enterSource(HomePage.java:65)
-	at com.airline.test.FlightSearchTest.searchFlightsWithValidRoute(FlightSearchTest.java:21)
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 155.0.8059.84, chrome: {chromedriverVersion: 155.0.8059.84 (5869fe313571..., userDataDir: C:\Users\LENOVO\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53568}, goog:processID: 19276, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53568/devtoo..., se:cdpVersion: 155.0.8059.84, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 203cb89389fb2b67a052905edfd71f90
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at com.airline.pages.FlightResultsPage.getTravelSummaryText(FlightResultsPage.java:32)
+	at com.airline.test.FlightBookingE2ETest.searchFlightsWithValidRoute(FlightBookingE2ETest.java:33)
 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
 	at java.base/java.lang.Thread.run(Thread.java:842)
-... Removed 18 stack frames
+... Removed 13 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -180,7 +165,7 @@ Session ID: 705f2322dc075974a7d3f201fe66904b
   &lt;/listeners&gt;
   &lt;test thread-count=&quot;5&quot; parallel=&quot;classes&quot; name=&quot;Flight Search Tests&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.airline.test.FlightSearchTest&quot;/&gt;
+      &lt;class name=&quot;com.airline.test.FlightBookingE2ETest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Flight Search Tests --&gt;
 &lt;/suite&gt; &lt;!-- Goibibo Test Suite --&gt;
@@ -223,13 +208,13 @@ data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'searchFlightsWithValidRoute')
-data.setCell(0, 2, 'com.airline.test.FlightSearchTest')
-data.setCell(0, 3, 2848);
+data.setCell(0, 2, 'com.airline.test.FlightBookingE2ETest')
+data.setCell(0, 3, 18581);
 window.suiteTableData['Goibibo_Test_Suite']= { tableData: data, tableDiv: 'times-div-Goibibo_Test_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 2 seconds</span>
+              <span class="suite-total-time">Total running time: 18 seconds</span>
               <div id="times-div-Goibibo_Test_Suite">
               </div> <!-- times-div-Goibibo_Test_Suite -->
             </div> <!-- times-div -->
@@ -255,24 +240,24 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.airline.test.FlightSearchTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.airline.test.FlightBookingE2ETest</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
                 <span class="method-name">loadConfig</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-method before">
                 <span class="method-name">setUp(null, null)</span>
-                <span class="method-start">148 ms</span>
+                <span class="method-start">296 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">searchFlightsWithValidRoute</span>
-                <span class="method-start">1493 ms</span>
+                <span class="method-start">5341 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">4348 ms</span>
+                <span class="method-start">24083 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

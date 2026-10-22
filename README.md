@@ -11,7 +11,7 @@ This project is a Selenium-based automation suite for demonstrating flight booki
 |-- src
 |   |-- main
 |   |   |-- java/com/airline/
-|   |   |   |-- driverfactory/
+|   |   |   |-- core/
 |   |   |   |   |-- DriverFactory.java
 |   |   |   |   |-- BasePage.java
 |   |   |   |   `-- APIEndpoints.java
@@ -64,9 +64,9 @@ Note: Set `headless=false` if you want to see the browser execution.
 
 After execution, reports are generated in:
 
-- Extent Report: `src/test/resources/ExtentReport/ExtentReport.html`
+- Extent Report: `/target/ExtentReport/ExtentReport.html`
 - TestNG XML: `test-output/testng-results.xml`
-- Screenshots: `src/test/resources/screenshots`
+- Screenshots: `/target/screenshots`
 
 ## 2. Docker Containerization
 
@@ -96,8 +96,8 @@ If you prefer a Freestyle project over a scripted Pipeline:
 4. Add a build step: "Invoke top-level Maven targets".
    - Goals: `clean test -Dheadless=true`
 5. Add post-build actions:
-   - Publish JUnit test result report: set XML path to `src/test/resources/ExtentReport/ExtentReport.html`
-   - Archive artifacts: `src/test/resources/screenshots`
+   - Publish JUnit test result report: set XML path to `target/ExtentReport/ExtentReport.html`
+   - Archive artifacts: `target/screenshots`
 6. Optional: If the HTML Publisher plugin is installed, publish HTML reports pointing to `target/extent`.
 
 ## 4. Jenkins Pipeline (Recommended)

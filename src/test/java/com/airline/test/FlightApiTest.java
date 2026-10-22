@@ -4,7 +4,7 @@ package com.airline.test;
 import io.restassured.http.ContentType;
 import org.testng.annotations.Test;
 
-import com.airline.driverfactory.APIEndpoints;
+import com.airline.core.APIEndpoints;
 
 import static io.restassured.RestAssured.*;
 

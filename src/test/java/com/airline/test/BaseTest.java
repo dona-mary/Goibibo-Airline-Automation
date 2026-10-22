@@ -11,7 +11,7 @@ import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 
-import com.airline.driverfactory.DriverFactory;
+import com.airline.core.DriverFactory;
 
 public class BaseTest {
     //protected DriverFactory driverFactory;

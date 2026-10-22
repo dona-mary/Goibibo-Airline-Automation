@@ -7,7 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import com.airline.driverfactory.BasePage;
+import com.airline.core.BasePage;
 
 public class PassengerPage extends BasePage {
 	

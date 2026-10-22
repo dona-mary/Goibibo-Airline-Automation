@@ -1,6 +1,6 @@
 package com.airline.test;
 
-import com.airline.driverfactory.DriverFactory;
+import com.airline.core.DriverFactory;
 import com.airline.pages.ConfirmationPage;
 import com.airline.pages.FlightResultsPage;
 import com.airline.pages.HomePage;

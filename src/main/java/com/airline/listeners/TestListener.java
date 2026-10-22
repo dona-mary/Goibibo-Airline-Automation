@@ -10,7 +10,7 @@ import org.testng.ITestListener;
 import org.testng.ITestResult;
 import org.testng.annotations.ITestAnnotation;
 
-import com.airline.driverfactory.DriverFactory;
+import com.airline.core.DriverFactory;
 import com.airline.utilities.ExtentManager;
 import com.airline.utilities.RetryAnalyzer;
 

@@ -1,4 +1,4 @@
-package com.airline.driverfactory;
+package com.airline.core;
 
 import java.time.Duration;
 import java.util.Collections;
@@ -36,17 +36,9 @@ public class DriverFactory {
 	    			co.setExperimentalOption("excludeSwitches", new String[]{"enable-automation"});
 	    			co.setExperimentalOption("useAutomationExtension", false);
 
-	    			// 3. Fake a real human user agent string
-	    			co.addArguments("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36");
-
 	    			// 4. Run in maximize window to mimic an actual monitor footprint
 	    			co.addArguments("--start-maximized");
 	    			 
-
-	    		        // 3. Optional: Add extra stealth to disguise automation signatures
-	    		       
-	    		        //co.addArguments("--disable-infobars");
-	    			
 	    			co.addArguments("--disable-notifications");
 
 	    			co.addArguments("--no-sandbox");

@@ -6,14 +6,14 @@
   </listeners>
   <test thread-count="5" parallel="classes" name="Flight Search Tests(failed)">
     <classes>
-      <class name="com.airline.test.FlightSearchTest">
+      <class name="com.airline.test.FlightBookingE2ETest">
         <methods>
           <include name="setUp"/>
-          <include name="tearDown"/>
           <include name="searchFlightsWithValidRoute"/>
+          <include name="tearDown"/>
           <include name="loadConfig"/>
         </methods>
-      </class> <!-- com.airline.test.FlightSearchTest -->
+      </class> <!-- com.airline.test.FlightBookingE2ETest -->
     </classes>
   </test> <!-- Flight Search Tests(failed) -->
 </suite> <!-- Failed suite [Goibibo Test Suite] -->

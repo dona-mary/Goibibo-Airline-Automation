@@ -1,4 +1,4 @@
-package com.airline.driverfactory;
+package com.airline.core;
 
 public class APIEndpoints {
 	private APIEndpoints() {

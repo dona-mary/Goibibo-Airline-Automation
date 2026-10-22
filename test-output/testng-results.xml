@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-10-21T23:32:02 IST" name="Goibibo Test Suite" finished-at="2026-10-21T23:32:06 IST" duration-ms="4376">
+  <suite started-at="2026-10-22T21:10:42 IST" name="Goibibo Test Suite" finished-at="2026-10-22T21:11:07 IST" duration-ms="24365">
     <groups>
     </groups>
-    <test started-at="2026-10-21T23:32:02 IST" name="Flight Search Tests" finished-at="2026-10-21T23:32:06 IST" duration-ms="4376">
-      <class name="com.airline.test.FlightSearchTest">
-        <test-method is-config="true" signature="loadConfig()[pri:0, instance:com.airline.test.FlightSearchTest@2b76ff4e]" started-at="2026-10-21T23:32:02 IST" name="loadConfig" finished-at="2026-10-21T23:32:02 IST" duration-ms="8" status="PASS">
+    <test started-at="2026-10-22T21:10:42 IST" name="Flight Search Tests" finished-at="2026-10-22T21:11:07 IST" duration-ms="24365">
+      <class name="com.airline.test.FlightBookingE2ETest">
+        <test-method is-config="true" signature="loadConfig()[pri:0, instance:com.airline.test.FlightBookingE2ETest@2b76ff4e]" started-at="2026-10-22T21:10:42 IST" name="loadConfig" finished-at="2026-10-22T21:10:42 IST" duration-ms="15" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loadConfig -->
-        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:com.airline.test.FlightSearchTest@2b76ff4e]" started-at="2026-10-21T23:32:02 IST" name="setUp" finished-at="2026-10-21T23:32:04 IST" duration-ms="1344" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:com.airline.test.FlightBookingE2ETest@2b76ff4e]" started-at="2026-10-22T21:10:43 IST" name="setUp" finished-at="2026-10-22T21:10:48 IST" duration-ms="5044" status="PASS">
           <params>
             <param index="0">
               <value is-null="true"/>
@@ -23,48 +23,27 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="searchFlightsWithValidRoute()[pri:0, instance:com.airline.test.FlightSearchTest@2b76ff4e]" started-at="2026-10-21T23:32:04 IST" name="searchFlightsWithValidRoute" finished-at="2026-10-21T23:32:06 IST" duration-ms="2848" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchSessionException">
+        <test-method signature="searchFlightsWithValidRoute()[pri:0, instance:com.airline.test.FlightBookingE2ETest@2b76ff4e]" started-at="2026-10-22T21:10:48 IST" name="searchFlightsWithValidRoute" finished-at="2026-10-22T21:11:06 IST" duration-ms="18581" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
             <message>
-              <![CDATA[invalid session id
+              <![CDATA[Expected condition failed: waiting for visibility of element located by By.xpath: //span[contains(text(), 'Flights from')]/b[text()='New Delhi']/following-sibling::b[text()='Mumbai'] (tried for 10 second(s) with 500 milliseconds interval)
 Build info: version: '4.27.0', revision: 'd6e718d134'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [705f2322dc075974a7d3f201fe66904b, findElement {value=fromCity, using=id}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 155.0.8059.84, chrome: {chromedriverVersion: 155.0.8059.84 (5869fe313571..., userDataDir: C:\Users\LENOVO\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50824}, goog:processID: 1568, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50824/devtoo..., se:cdpVersion: 155.0.8059.84, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 705f2322dc075974a7d3f201fe66904b]]>
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 155.0.8059.84, chrome: {chromedriverVersion: 155.0.8059.84 (5869fe313571..., userDataDir: C:\Users\LENOVO\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53568}, goog:processID: 19276, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53568/devtoo..., se:cdpVersion: 155.0.8059.84, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 203cb89389fb2b67a052905edfd71f90]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchSessionException: invalid session id
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //span[contains(text(), 'Flights from')]/b[text()='New Delhi']/following-sibling::b[text()='Mumbai'] (tried for 10 second(s) with 500 milliseconds interval)
 Build info: version: '4.27.0', revision: 'd6e718d134'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [705f2322dc075974a7d3f201fe66904b, findElement {value=fromCity, using=id}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 155.0.8059.84, chrome: {chromedriverVersion: 155.0.8059.84 (5869fe313571..., userDataDir: C:\Users\LENOVO\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50824}, goog:processID: 1568, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50824/devtoo..., se:cdpVersion: 155.0.8059.84, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 705f2322dc075974a7d3f201fe66904b
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:66)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
-at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:194)
-at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:190)
-at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:627)
-at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:624)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
-at com.airline.pages.HomePage.enterSource(HomePage.java:65)
-at com.airline.test.FlightSearchTest.searchFlightsWithValidRoute(FlightSearchTest.java:21)
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 155.0.8059.84, chrome: {chromedriverVersion: 155.0.8059.84 (5869fe313571..., userDataDir: C:\Users\LENOVO\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53568}, goog:processID: 19276, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53568/devtoo..., se:cdpVersion: 155.0.8059.84, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 203cb89389fb2b67a052905edfd71f90
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at com.airline.pages.FlightResultsPage.getTravelSummaryText(FlightResultsPage.java:32)
+at com.airline.test.FlightBookingE2ETest.searchFlightsWithValidRoute(FlightBookingE2ETest.java:33)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -85,15 +64,15 @@ at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecut
 at java.base/java.lang.Thread.run(Thread.java:842)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchSessionException -->
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- searchFlightsWithValidRoute -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.airline.test.FlightSearchTest@2b76ff4e]" started-at="2026-10-21T23:32:06 IST" name="tearDown" finished-at="2026-10-21T23:32:06 IST" duration-ms="35" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.airline.test.FlightBookingE2ETest@2b76ff4e]" started-at="2026-10-22T21:11:06 IST" name="tearDown" finished-at="2026-10-22T21:11:07 IST" duration-ms="297" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.airline.test.FlightSearchTest -->
+      </class> <!-- com.airline.test.FlightBookingE2ETest -->
     </test> <!-- Flight Search Tests -->
   </suite> <!-- Goibibo Test Suite -->
 </testng-results>
