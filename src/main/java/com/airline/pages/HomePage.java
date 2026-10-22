@@ -9,11 +9,19 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.openqa.selenium.StaleElementReferenceException;
-public class HomePage {
 
-    private final WebDriver driver;
-    private final WebDriverWait wait;
+import com.airline.driverfactory.BasePage;
+import com.airline.utilities.ExtentManager;
+import org.openqa.selenium.StaleElementReferenceException;
+public class HomePage extends BasePage {
+	  private final WebDriverWait wait;
+	    
+	    public HomePage(WebDriver driver) {
+	    	super(driver);
+			this.wait = new WebDriverWait(
+	                driver, Duration.ofSeconds(10));
+	    }
+
     
     private final By closePopupButton =By.cssSelector(
             "span.logSprite.icClose");
@@ -27,11 +35,7 @@ public class HomePage {
     private final By searchButton =
             By.cssSelector("[data-cy='submit']");
 
-    public HomePage(WebDriver driver) {
-        this.driver = driver;
-        this.wait = new WebDriverWait(
-                driver, Duration.ofSeconds(10));
-    }
+    
     public void alertDismiss() {
     	Alert alert=wait.until(
                 ExpectedConditions.alertIsPresent());
@@ -93,17 +97,7 @@ public class HomePage {
     }
 
     public void enterDestination(String destination) {
-//        //wait.until( ExpectedConditions.visibilityOfElementLocated(destinationInput)).clear();
-//        wait.until(
-//                ExpectedConditions.visibilityOfElementLocated(destinationInput)
-//            ).sendKeys(destination);
-//        JavascriptExecutor js = (JavascriptExecutor) driver;
-//        WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(selectCity));
-//     // Scrolls the element smoothly to the exact center of the page viewport
-//     js.executeScript("arguments[0].scrollIntoView({block: 'center', behavior: 'smooth'});", element);
-//
-//     // Give a minor buffer for smooth scrolling to complete if needed
-//     element.click();
+//        
     	 WebElement destinationField = wait.until(
     		        ExpectedConditions.elementToBeClickable(destinationInput)
     		    );
@@ -139,6 +133,7 @@ public class HomePage {
 			ExpectedConditions.visibilityOfElementLocated(dateSelector)).click();
 	}
     public void searchFlights() {
+    	ExtentManager.takeScreenshot(driver, "search_flights");
         wait.until(
             ExpectedConditions.elementToBeClickable(searchButton)
         ).click();

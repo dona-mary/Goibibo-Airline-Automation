@@ -8,16 +8,21 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class FlightResultsPage {
-    private final WebDriver driver;
+import com.airline.driverfactory.BasePage;
+
+public class FlightResultsPage extends BasePage {
+	
     private final WebDriverWait wait;
     
     public FlightResultsPage(WebDriver driver) {
-        this.driver = driver;
-        this.wait = new WebDriverWait(
+    	super(driver);
+		this.wait = new WebDriverWait(
                 driver, Duration.ofSeconds(10));
     }
     private final By flightHeader =By.xpath("//span[contains(text(), 'Flights from')]/b[text()='New Delhi']/following-sibling::b[text()='Mumbai']");
+    private final By viewFareButton = By.xpath("(//button[contains(@id,'bookbutton')])[1]");
+    private final By bookFlightButton = By.xpath("//button[text()='BOOK NOW']");
+  //div[contains(@class,'travellerHeading')]
     public String getResultsPageUrl() {
     	wait.until(ExpectedConditions.urlContains("search"));
     	System.out.println(driver.getCurrentUrl());
@@ -27,4 +32,10 @@ public class FlightResultsPage {
         WebElement header = wait.until(ExpectedConditions.visibilityOfElementLocated(flightHeader));
         return header.getText();
     }
+    
+    public void selectFlight() {
+		WebElement flightButton = wait.until(ExpectedConditions.elementToBeClickable(viewFareButton));
+		flightButton.click();
+		wait.until(ExpectedConditions.elementToBeClickable(bookFlightButton)).click();
+	}
 }
