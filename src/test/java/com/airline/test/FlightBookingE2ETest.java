@@ -10,7 +10,7 @@ import com.airline.pages.PaymentPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class FlightSearchTest extends BaseTest {
+public class FlightBookingE2ETest extends BaseTest {
 
     @Test
     public void searchFlightsWithValidRoute() {
@@ -38,7 +38,11 @@ public class FlightSearchTest extends BaseTest {
             "FAIL: Header does not contain destination city: " + expectedHeaderFragment2);
         
         PassengerPage passengerPage = new PassengerPage(DriverFactory.getDriver());
+        passengerPage.fillPassengerDetails("Kishore", "varma", "dummydummy@gmail.com", "9566445656");
+        
         PaymentPage paymentPage = new PaymentPage(DriverFactory.getDriver());
+        paymentPage.paymentProcess("1234566546");
+        
         ConfirmationPage confirmationPage = new ConfirmationPage(DriverFactory.getDriver());
         
     }

@@ -8,7 +8,7 @@
   </listeners>
     <test name="Flight Search Tests">
         <classes>
-            <class name="com.airline.test.FlightSearchTest"/>
+            <class name="com.airline.test.FlightBookingE2ETest"/>
             <!--  <class name="com.airline.test.FlightApiTest"/>-->
         </classes>
     </test>
